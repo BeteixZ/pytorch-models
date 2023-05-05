@@ -255,6 +255,7 @@ def _mobilenet_v2(
     **kwargs: Any
 ) -> MobileNetV2:
     model = MobileNetV2(width_mult=width_mult, **kwargs)
+    pretrained = True
     if pretrained:
         state_dict = load_state_dict_from_url(model_urls[arch],
                                               progress=progress)
